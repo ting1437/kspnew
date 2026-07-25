@@ -1,0 +1,30 @@
+:root{
+/* Craft-paper system: corners are barely rounded — the softness comes from torn edges, not radii. */
+--radius-0:0;
+--radius-1:2px;   /* stickers, chips */
+--radius-2:4px;   /* inputs, buttons */
+--radius-3:8px;   /* cards */
+--radius-4:14px;  /* modals, large panels */
+--radius-pill:999px;
+--radius-blob:14px 6px 16px 8px; /* hand-cut shape, use sparingly */
+
+--stroke-hair:1px; /* @kind spacing */
+--stroke:1.5px; /* @kind spacing */
+--stroke-thick:2px; /* @kind spacing */
+--stroke-ink:2.5px; /* @kind spacing */
+
+/* torn / deckle edges — apply as clip-path */
+--tear-bottom:polygon(0 0,100% 0,100% calc(100% - 7px),96% 100%,92% calc(100% - 5px),87% calc(100% - 1px),81% calc(100% - 7px),74% calc(100% - 2px),67% calc(100% - 8px),60% calc(100% - 3px),53% calc(100% - 9px),46% calc(100% - 2px),39% calc(100% - 7px),32% calc(100% - 1px),25% calc(100% - 8px),18% calc(100% - 3px),11% calc(100% - 7px),5% calc(100% - 2px),0 calc(100% - 8px)); /* @kind other */
+--tear-top:polygon(0 8px,5% 2px,11% 7px,18% 3px,25% 8px,32% 1px,39% 7px,46% 2px,53% 9px,60% 3px,67% 8px,74% 2px,81% 7px,87% 1px,92% 5px,96% 0,100% 8px,100% 100%,0 100%); /* @kind other */
+--tear-both:polygon(0 8px,6% 2px,13% 7px,21% 2px,29% 8px,38% 2px,47% 7px,56% 2px,65% 8px,74% 2px,83% 7px,91% 2px,100% 8px,100% calc(100% - 8px),92% calc(100% - 2px),84% calc(100% - 7px),75% calc(100% - 2px),66% calc(100% - 8px),57% calc(100% - 2px),48% calc(100% - 7px),38% calc(100% - 2px),29% calc(100% - 8px),20% calc(100% - 2px),11% calc(100% - 7px),5% calc(100% - 2px),0 calc(100% - 8px)); /* @kind other */
+
+/* sticker tilts */
+--tilt-xs:-.6deg; /* @kind other */
+--tilt-sm:-1.4deg; /* @kind other */
+--tilt-md:-2.6deg; /* @kind other */
+--tilt-lg:-4deg; /* @kind other */
+--tilt-xs-r:.6deg; /* @kind other */
+--tilt-sm-r:1.4deg; /* @kind other */
+--tilt-md-r:2.6deg; /* @kind other */
+--tilt-lg-r:4deg; /* @kind other */
+}

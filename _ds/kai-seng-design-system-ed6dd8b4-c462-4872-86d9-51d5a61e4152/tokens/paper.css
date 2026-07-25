@@ -1,0 +1,16 @@
+:root{
+/* Reusable craft textures. Layer these as background-image on surfaces. */
+--tex-grain:radial-gradient(rgba(63,57,52,.055) .6px,transparent .7px); /* @kind other */
+--tex-grain-size:3px 3px; /* @kind other */
+--tex-grid:linear-gradient(rgba(63,57,52,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(63,57,52,.07) 1px,transparent 1px); /* @kind other */
+--tex-grid-size:22px 22px; /* @kind other */
+--tex-dot-grid:radial-gradient(rgba(63,57,52,.16) 1px,transparent 1.2px); /* @kind other */
+--tex-dot-grid-size:20px 20px; /* @kind other */
+--tex-rule:repeating-linear-gradient(to bottom,transparent 0,transparent 27px,rgba(63,57,52,.10) 27px,rgba(63,57,52,.10) 28px); /* @kind other */
+
+/* washi tape */
+--tape-sage:linear-gradient(180deg,rgba(122,128,97,.62),rgba(122,128,97,.52)); /* @kind other */
+--tape-clay:linear-gradient(180deg,rgba(183,104,77,.58),rgba(183,104,77,.48)); /* @kind other */
+--tape-kraft:linear-gradient(180deg,rgba(217,200,174,.86),rgba(196,175,144,.8)); /* @kind other */
+--tape-edge:repeating-linear-gradient(90deg,rgba(255,252,246,.5) 0 3px,transparent 3px 6px); /* @kind other */
+}

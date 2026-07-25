@@ -1,0 +1,13 @@
+:root{
+--dur-instant:80ms; /* @kind other */
+--dur-fast:140ms; /* @kind other */
+--dur-base:220ms; /* @kind other */
+--dur-slow:380ms; /* @kind other */
+--dur-page:520ms; /* @kind other */
+--ease-out:cubic-bezier(.22,.85,.32,1); /* @kind other */
+--ease-in-out:cubic-bezier(.5,.05,.3,1); /* @kind other */
+--ease-paper:cubic-bezier(.34,1.32,.5,1); /* @kind other */
+--ease-linear:linear; /* @kind other */
+--hover-lift:translateY(-2px); /* @kind other */
+--press-scale:scale(.985); /* @kind other */
+}

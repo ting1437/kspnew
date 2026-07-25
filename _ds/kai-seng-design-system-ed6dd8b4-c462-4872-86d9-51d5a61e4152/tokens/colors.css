@@ -1,0 +1,65 @@
+:root{
+/* --- Base palette (brand-supplied) --- */
+--ks-cream:#F5EFE5;      /* primary surface — "paper" */
+--ks-sand:#D9C8AE;       /* secondary surface / kraft tone */
+--ks-sage:#7A8061;       /* primary accent — olive green */
+--ks-terracotta:#B7684D; /* secondary accent — clay */
+--ks-ink:#3F3934;        /* text + line work */
+--ks-red:#FF000E;        /* the logo red. Mark only. */
+
+/* --- Derived tints & shades --- */
+--ks-paper:#FFFCF6;      /* lifted paper, cards on cream */
+--ks-cream-deep:#EADCC8; /* logo lockup background */
+--ks-sand-light:#E7DAC5;
+--ks-sand-deep:#C4AF90;
+--ks-sage-light:#98A07E;
+--ks-sage-deep:#5C6149;
+--ks-sage-wash:#E4E5DA;
+--ks-terracotta-light:#CC8770;
+--ks-terracotta-deep:#8E4E38;
+--ks-terracotta-wash:#F0DED5;
+--ks-ink-soft:#6B625A;
+--ks-ink-faint:#9A9188;
+--ks-ink-deep:#241F1B;
+
+/* --- Semantic surfaces --- */
+--surface-page:var(--ks-cream);
+--surface-card:var(--ks-paper);
+--surface-raised:var(--ks-paper);
+--surface-sunken:var(--ks-sand-light);
+--surface-kraft:var(--ks-sand);
+--surface-invert:var(--ks-ink);
+--surface-accent:var(--ks-sage);
+--surface-accent-alt:var(--ks-terracotta);
+--surface-wash-sage:var(--ks-sage-wash);
+--surface-wash-clay:var(--ks-terracotta-wash);
+
+/* --- Semantic text --- */
+--text-heading:var(--ks-ink);
+--text-body:var(--ks-ink-soft);
+--text-muted:var(--ks-ink-faint);
+--text-inverse:var(--ks-cream);
+--text-accent:var(--ks-sage-deep);
+--text-accent-alt:var(--ks-terracotta-deep);
+--text-link:var(--ks-terracotta-deep);
+--text-link-hover:var(--ks-terracotta);
+
+/* --- Lines & borders --- */
+--border-hairline:rgba(63,57,52,.14);
+--border-soft:rgba(63,57,52,.22);
+--border-strong:var(--ks-ink);
+--border-accent:var(--ks-sage);
+--rule-dotted:rgba(63,57,52,.30);
+
+/* --- Status (derived from the brand palette, not added hues) --- */
+--status-ok:var(--ks-sage-deep);
+--status-ok-bg:var(--ks-sage-wash);
+--status-warn:#B98A32;
+--status-warn-bg:#F2E6CB;
+--status-alert:var(--ks-terracotta-deep);
+--status-alert-bg:var(--ks-terracotta-wash);
+
+/* --- Brand mark --- */
+--brand-mark:var(--ks-red);
+--brand-mark-plate:var(--ks-cream-deep);
+}

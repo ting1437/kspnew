@@ -1,0 +1,22 @@
+:root{
+--space-0:0;--space-1:2px;--space-2:4px;--space-3:8px;--space-4:12px;--space-5:16px;
+--space-6:20px;--space-7:24px;--space-8:32px;--space-9:40px;--space-10:48px;
+--space-11:64px;--space-12:80px;--space-13:96px;--space-14:128px;
+
+/* component padding */
+--pad-chip:4px 10px;
+--pad-button-sm:8px 14px;
+--pad-button:11px 20px;
+--pad-button-lg:15px 28px;
+--pad-input:11px 14px;
+--pad-card:20px;
+--pad-card-lg:28px;
+
+/* layout */
+--gutter:24px;
+--gutter-lg:40px;
+--container-max:1200px;
+--container-narrow:720px;
+--section-y:96px;
+--section-y-sm:56px;
+}
