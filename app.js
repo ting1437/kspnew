@@ -164,6 +164,54 @@ function mountProduct(){
   var d = document.querySelector('meta[name="description"]');
   if (d) d.setAttribute('content', p.b);
   var crumb = byId('crumb-name'); if (crumb) crumb.textContent = p.name;
+
+  /* ---------- SEO: per-product canonical, Open Graph + Product/Breadcrumb JSON-LD ---------- */
+  var ORIGIN = 'https://www.ksp.com.my', pageUrl = ORIGIN + '/product-detail.html?id=' + p.id;
+  var imgUrl = /^https?:/.test(p.image) ? p.image : ORIGIN + '/' + p.image;
+  function setMeta(sel, attr, val){ var el = document.querySelector(sel); if (el) el.setAttribute(attr, val); }
+  // rewrite the placeholder canonical/OG to point at this exact product
+  setMeta('link[rel="canonical"]', 'href', pageUrl);
+  setMeta('meta[property="og:url"]', 'content', pageUrl);
+  setMeta('meta[property="og:title"]', 'content', p.name + ' — Kai Seng');
+  setMeta('meta[property="og:description"]', 'content', p.b);
+  setMeta('meta[property="og:image"]', 'content', imgUrl);
+  setMeta('meta[property="og:type"]', 'content', 'product');
+  // inject Product + BreadcrumbList structured data (replaced on every product view)
+  var ld = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Product',
+        name: p.name,
+        image: imgUrl,
+        description: p.b,
+        sku: p.sku,
+        category: p.cat,
+        brand: { '@type': 'Brand', name: 'Kai Seng' },
+        offers: {
+          '@type': 'Offer',
+          url: pageUrl,
+          priceCurrency: 'MYR',
+          price: String(p.price),
+          availability: p.soldOut ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
+          seller: { '@type': 'Organization', name: 'Syarikat Perniagaan Kai Seng Sdn Bhd' }
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: ORIGIN + '/' },
+          { '@type': 'ListItem', position: 2, name: 'Products & Services', item: ORIGIN + '/services.html' },
+          { '@type': 'ListItem', position: 3, name: p.name, item: pageUrl }
+        ]
+      }
+    ]
+  };
+  var old = byId('product-jsonld'); if (old) old.remove();
+  var s = document.createElement('script');
+  s.type = 'application/ld+json'; s.id = 'product-jsonld';
+  s.textContent = JSON.stringify(ld);
+  document.head.appendChild(s);
   var opts = (p.opts || []).map(function(o){
     return '<label class="field"><span>' + esc(o.label) + '</span><select data-opt="' + esc(o.label) + '">' +
       o.values.map(function(v){ return '<option>' + esc(v) + '</option>'; }).join('') + '</select></label>';
@@ -345,7 +393,7 @@ function mountBooking(){
       'Service: ' + val('service'),
       'Preferred date: ' + val('date'),
       'Preferred time: ' + val('time'),
-      'Notes: ' + (val('notes') || '—'), '', 'Sent from kaiseng.com.my'].join('\n');
+      'Notes: ' + (val('notes') || '—'), '', 'Sent from www.ksp.com.my'].join('\n');
     window.open(WA + '?text=' + encodeURIComponent(msg), '_blank');
   });
 }
