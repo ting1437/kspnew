@@ -1,17 +1,4 @@
-# robots.txt — https://www.ksp.com.my/
-# Public site is fully crawlable; only private/utility paths are blocked.
-
 User-agent: *
 Allow: /
 
-# --- Private / non-indexable paths ---
-Disallow: /admin/          # admin area (if/when added)
-Disallow: /uploads/        # user-uploaded files, not for search
-Disallow: /checkout.html   # transactional cart page (also noindex)
-
-# NOTE: /assets and /_ds (images, CSS, JS) are intentionally LEFT CRAWLABLE.
-# Google must fetch CSS/JS/images to render and score the page — blocking them
-# hurts mobile-friendliness, Core Web Vitals and image SEO. Do not disallow them.
-
-# XML sitemap
-Sitemap: https://www.ksp.com.my/sitemap.xml
+Sitemap: https://kaiseng.com.my/sitemap.xml

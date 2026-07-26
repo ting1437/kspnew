@@ -115,6 +115,18 @@ window.SITE = {
      b:'Individually wrapped for hygiene, with your name printed on the wrapper for delivery orders.',
      uses:['Delivery sets','Catering','Hotel buffet'],
      options:['Plain wrapper','Printed wrapper','Fork, spoon or set']},
+    {id:'boba-party-cup', cat:'Cutlery', name:'Printed Bubble Tea Party Cup', sku:'KS-CUT-BT24', image:'assets/products/party-cup-splash.jpg',
+     pack:'50 pcs × 20 / ctn', moq:'1 carton', material:'PP, clear', size:'16 oz / 22 oz / 24 oz', print:'1 – 4 colour body print', lead:'12 – 16 working days',
+     stock:{tone:'ok',label:'In stock'},
+     b:'For bubble tea, fruit soda and anything with topping. A wide mouth for pearls, and a body print that shows off through the drink.',
+     uses:['Bubble tea','Fruit soda and juice','Dessert drinks'],
+     options:['Plain clear','1-colour logo print','Full-colour body print','Matching dome lid and straw']},
+    {id:'bento-tray', cat:'Cutlery', name:'3-Compartment Bento Tray with Lid', sku:'KS-CUT-BT03', image:'assets/products/bento-tray-3c.jpg',
+     pack:'50 pcs × 8 / ctn', moq:'1 carton', material:'PP base, PET lid, food grade', size:'3 compartments, 1000 ml', print:'Printed lid sticker or sleeve', lead:'10 – 14 working days',
+     stock:{tone:'ok',label:'In stock'},
+     b:'Keeps rice, meat and vegetables apart so the set still looks right when it arrives. Clear lid, stackable, microwave safe base.',
+     uses:['Economy rice sets','Meal prep and delivery','Catering packs'],
+     options:['Plain tray and lid','Printed lid sticker','Printed sleeve band','2-compartment version']},
     {id:'glove', cat:'Kitchen Consumables', name:'Nitrile Powder-Free Glove', sku:'KS-KC-NG01', image:'assets/products/nitrile-glove.png',
      pack:'100 pcs × 10 / ctn', moq:'1 carton', material:'Nitrile, powder-free', size:'S – XL', print:'Not printable', lead:'Ready stock',
      stock:{tone:'warn',label:'Low stock'},
@@ -160,6 +172,8 @@ window.SITE = {
     'party-cup':{price:92,opts:[{label:'Size',values:['16 oz','22 oz']},{label:'Print',values:['Plain clear','1-colour','2-colour']}]},
     'serviette':{price:64,opts:[{label:'Print',values:['Plain white','Corner logo','Centre logo']}]},
     'cutlery-set':{price:58,opts:[{label:'Item',values:['Fork','Spoon','Fork + spoon set']}]},
+    'boba-party-cup':{price:98,opts:[{label:'Size',values:['16 oz','22 oz','24 oz']},{label:'Print',values:['Plain clear','1-colour logo','Full-colour body']}]},
+    'bento-tray':{price:124,opts:[{label:'Layout',values:['3 compartment','2 compartment']},{label:'Print',values:['Plain','Lid sticker','Sleeve band']}]},
     'glove':{price:46,opts:[{label:'Size',values:['S','M','L','XL']}]},
     'apron':{price:38,opts:[{label:'Size',values:['One size']}]}
   };
@@ -167,7 +181,7 @@ window.SITE = {
     var m = meta[p.id] || {};
     p.price = m.price || 60;
     p.opts = m.opts || [];
-    p.soldOut = p.stock.tone === 'alert';
-    if (p.soldOut) p.stock = {tone:'alert', label:'Sold out'};
+    p.soldOut = true;
+    p.stock = {tone:'alert', label:'Out of stock'};
   });
 })();

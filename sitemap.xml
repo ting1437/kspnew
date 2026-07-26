@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- XML sitemap for https://www.ksp.com.my/ — public, indexable pages only.
-     Excludes checkout.html and 404.html (both noindex). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core pages -->
-  <url><loc>https://www.ksp.com.my/</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.ksp.com.my/services.html</loc><lastmod>2026-07-25</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.ksp.com.my/about.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.ksp.com.my/contact.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
-  <!-- Product detail pages (one per catalogue item) -->
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=hot-cup-8oz</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=kraft-bag</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=lunch-bag</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=paper-container</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=pp-lunch-box</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=pp-round</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=party-cup</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=serviette</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=cutlery-set</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=glove</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.ksp.com.my/product-detail.html?id=apron</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-
+  <url><loc>https://kaiseng.com.my/</loc><lastmod>2026-07-25</lastmod><priority>1.0</priority></url>
+  <url><loc>https://kaiseng.com.my/services.html</loc><lastmod>2026-07-25</lastmod><priority>0.9</priority></url>
+  <url><loc>https://kaiseng.com.my/about.html</loc><lastmod>2026-07-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kaiseng.com.my/contact.html</loc><lastmod>2026-07-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kaiseng.com.my/product-detail.html</loc><lastmod>2026-07-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kaiseng.com.my/checkout.html</loc><lastmod>2026-07-25</lastmod><priority>0.3</priority></url>
 </urlset>
