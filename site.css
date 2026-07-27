@@ -118,11 +118,13 @@ h1,h2,h3,h4,p{margin:0}
 .heroart{position:relative;height:860px}
 .heroart .s1{position:absolute;top:0;left:20px;width:660px;rotate:-2.6deg}
 .heroart .s2{position:absolute;bottom:256px;right:0;width:470px;rotate:3.4deg}
-.cuplift{position:absolute;left:-110px;bottom:24px;width:300px;rotate:-8deg;cursor:pointer;z-index:2}
+.cuplift{position:absolute;left:-110px;bottom:24px;width:375px;rotate:-8deg;cursor:pointer;z-index:2}
 .cuplift img{display:block;width:100%;height:auto}
 .cup-flower{position:absolute;left:50%;bottom:48%;width:17%;margin-left:-8.5%;transform:translateY(30%) scale(.3) rotate(-20deg);transform-origin:50% 100%;opacity:0;pointer-events:none;z-index:3;transition:opacity 200ms var(--ease-out) 160ms,transform 420ms var(--ease-paper) 180ms}
 .cup-lid{position:relative;z-index:4;transition:transform var(--dur-base) var(--ease-paper)}
 .cup-body{position:relative;z-index:2}
+.cup-tag{position:absolute;left:50%;bottom:9%;z-index:5;translate:-50% 0;rotate:-2deg;font:700 13px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--ks-cream);background:var(--ks-terracotta);padding:7px 13px;border-radius:var(--radius-pill);box-shadow:var(--shadow-2);pointer-events:none;transition:opacity var(--dur-base) var(--ease-out),transform var(--dur-base) var(--ease-paper)}
+.cuplift:hover .cup-tag{opacity:0;transform:translateY(6px)}
 .cuplift:hover .cup-flower{opacity:1;transform:translateY(0) scale(1) rotate(-20deg)}
 .cuplift:hover .cup-lid{transform:translate(-8%,-16%) rotate(-12deg)}
 @keyframes ks-wobble{0%{rotate:0deg}22%{rotate:1.5deg}45%{rotate:-1.3deg}68%{rotate:.7deg}100%{rotate:0deg}}

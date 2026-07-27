@@ -138,7 +138,13 @@ window.SITE = {
      stock:{tone:'ok',label:'In stock'},
      b:'Simple, clean, cheap by the carton. Add it to any packaging order.',
      uses:['Prep kitchens','Catering crews','Cleaning'],
-     options:['One size, 100 pcs per pack']}
+     options:['One size, 100 pcs per pack']},
+    {id:'garbage-bag', cat:'Kitchen Consumables', name:'Heavy Duty Garbage Bag', sku:'KS-KC-GB01', image:'assets/products/garbage-bag.png',
+     pack:'25 pcs × 20 / ctn', moq:'1 carton', material:'HDPE, black', size:'S / M / L / XL', print:'Not printable', lead:'Ready stock',
+     stock:{tone:'ok',label:'In stock'},
+     b:'Thick black bags that hold a full kitchen bin without splitting. Bought by the carton with the rest of your back-of-house list.',
+     uses:['Kitchen bins','Shop and cafe waste','Cleaning rounds'],
+     options:['S / M / L / XL','Flat pack or roll']}
   ],
   packages:[
     {name:'Test Print', tag:'Start here', b:'For a first look before you commit.',
@@ -175,7 +181,8 @@ window.SITE = {
     'boba-party-cup':{price:98,opts:[{label:'Size',values:['16 oz','22 oz','24 oz']},{label:'Print',values:['Plain clear','1-colour logo','Full-colour body']}]},
     'bento-tray':{price:124,opts:[{label:'Layout',values:['3 compartment','2 compartment']},{label:'Print',values:['Plain','Lid sticker','Sleeve band']}]},
     'glove':{price:46,opts:[{label:'Size',values:['S','M','L','XL']}]},
-    'apron':{price:38,opts:[{label:'Size',values:['One size']}]}
+    'apron':{price:38,opts:[{label:'Size',values:['One size']}]},
+    'garbage-bag':{price:54,opts:[{label:'Size',values:['S','M','L','XL']},{label:'Pack',values:['Flat pack','Roll']}]}
   };
   window.SITE.products.forEach(function(p){
     var m = meta[p.id] || {};

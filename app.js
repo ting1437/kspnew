@@ -65,7 +65,10 @@ function mountFloating(){
 function mountCursor(){
   var straw = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M3 22 L14 7 L21 4" fill="none" stroke="#3F3934" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   var st = document.createElement('style');
-  st.textContent = '*{cursor:url("' + straw + '") 3 27, auto}a,button,summary,input,select,textarea,label{cursor:url("' + straw + '") 3 27, pointer}';
+  st.textContent = 'html,body,*,*::before,*::after{cursor:url("' + straw + '") 3 27, auto !important}' +
+    'a,a *,button,button *,summary,label,label *,select,option,[role="button"],[onclick],.btn,.btn *,.social,.filters button,.thumbs button,.catcard,.catcard *,.pcard,.pcard *,.faq summary,.faq summary *,.qty button,#ks-cart,#ks-cart *,#ks-wa,#ks-wa *{cursor:url("' + straw + '") 3 27, auto !important}' +
+    'input,textarea{cursor:url("' + straw + '") 3 27, text !important}' +
+    'button[disabled],.btn[disabled]{cursor:url("' + straw + '") 3 27, auto !important}';
   document.head.appendChild(st);
   var layer = document.createElement('div'); layer.id = 'ks-bubbles';
   var bubs = [];
